@@ -1,0 +1,145 @@
+body {
+  /* background-color: rgb(151, 151, 192); */
+  margin: 0;
+  color: #40514e;
+  text-align: center;
+  font-family: "Meriweather", serif;
+}
+
+a {
+  color: #11999e;
+}
+
+h1 {
+  color: #66bfbf;
+  font-size: 5.625rem;
+  font-family: "Sacramento", cursive;
+  margin: 70px auto 0 auto;
+}
+
+h2 {
+  font-weight: normal;
+  color: #66bfbf;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+h3 {
+  color: #11999e;
+  font-family: "Montserrat", sans-serif;
+}
+
+h4 {
+  color: #11999e;
+  font-family: "Montserrat", sans-serif;
+}
+
+hr {
+  border-style: dotted none none;
+  width: 60px;
+  border-width: 7px;
+  border-color: #eaf6f6;
+  margin: 50px auto 45px auto;
+}
+
+p {
+  line-height: 2;
+}
+
+.into {
+  width: 30%;
+  margin: auto;
+}
+
+.topContainer {
+  padding-top: 100px;
+  background-color: #eaf6f6;
+  position: relative;
+}
+
+.middleContainer {
+  /* background-color: #e0ffcf; */
+  padding: 80px 0 80px 0;
+}
+
+.bottomContainer {
+  background-color: #66bfbf;
+}
+
+.topCloud {
+  position: absolute;
+  right: 370px;
+  top: 50px;
+}
+.bottomCloud {
+  position: absolute;
+  left: 300px;
+  bottom: 310px;
+}
+
+.profileImage {
+  max-width: 15%;
+  height: auto;
+}
+
+.skill-row {
+  width: 50%;
+  margin: 100px auto 100px auto;
+  text-align: left;
+  /* position: relative;
+    left: 25%; */
+}
+
+.skill-Img {
+  float: left;
+  width: 25%;
+  margin-right: 10px;
+}
+
+.dance-Img {
+  width: 25%;
+  float: right;
+}
+
+.btn {
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(to bottom, #11cdd4, #11999e);
+  border: none;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  background: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+}
+
+.footer-link {
+  color: #11999e;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 15px;
+}
+
+.footer-link:hover {
+  color: #eaf6f6;
+}
+
+.copyRight {
+  color: #eaf6f6;
+  font-size: 75%;
+  padding: 20px 0;
+}
+/* .skillDescC {
+    clear: left;
+}
+
+.skillDescD {
+    clear: right;
+} */

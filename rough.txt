@@ -1,0 +1,114 @@
+import proIco from "./figures/LamiaHossain.jpg";
+import "./App.css";
+import logOut from "./icons/log-out-outline.svg";
+import profile from "./icons/person-circle-outline.svg";
+import sun from "./icons/sunny-outline.svg";
+import moon from "./icons/moon-outline.svg";
+import React, { useState, useEffect, useRef } from "react";
+
+function App() {
+  const [open, setOpen] = useState(false);
+
+  let menuRef = useRef();
+
+  useEffect(() => {
+    let handler = (e) => {
+      if (!menuRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  }, []);
+
+  const themeCheck = () => {
+    const userTheme = localStorage.getItem("theme");
+    const systemTheme = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+
+    if (userTheme === "dark" || (!userTheme && systemTheme)) {
+      document.documentElement.classList.add("dark");
+    }
+  };
+
+  const themeSwitch = () => {
+    if (document.documentElement.classList.contains("dark")) {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    }
+  };
+
+  const handleThemeSwitch = () => {
+    themeSwitch();
+  };
+
+  useEffect(() => {
+    themeCheck();
+  }, []);
+
+  return (
+    <div className="h-screen flex items-center justify-center px-8 bg-slate-100 dark:text-white">
+      <header className="App-header">
+        <div className="menu-container" ref={menuRef}>
+          <div
+            className="menu-trigger"
+            onClick={() => {
+              setOpen(!open);
+            }}
+          >
+            <img src={proIco} className="proIco" alt="Lamia" />
+          </div>
+
+          <div className={`dropdown-menu ${open ? "active" : "inactive"}`}>
+            <h3>
+              The Kite
+              <br />
+              <span>Website Designer</span>
+            </h3>
+            <ul>
+              <DropdownItem img={profile} text={"Profile"} alt="P" />
+              <DropdownItem img={logOut} text={"Log Out"} alt="P" />
+            </ul>
+          </div>
+        </div>
+
+        <div className="flex items-start mb-4">
+          <h1 className="text-4xl flex-1">Tailwind Dark/Light Mode</h1>
+          <img
+            className="moon cursor-pointer"
+            src={moon}
+            alt=""
+            onClick={handleThemeSwitch}
+          />
+          <img
+            className="sun cursor-pointer"
+            src={sun}
+            alt=""
+            onClick={handleThemeSwitch}
+          />
+        </div>
+        <button className="py-3 px-4 bg-black text-white rounded-md dark:bg-white dark:text-slate-900">
+          Dark Mode Test
+        </button>
+      </header>
+    </div>
+  );
+}
+
+function DropdownItem(props) {
+  return (
+    <li class="dropDownItem">
+      <img src={props.img} alt="P" />
+      <a>{props.text}</a>
+    </li>
+  );
+}
+
+export default App;

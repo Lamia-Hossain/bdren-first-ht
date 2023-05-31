@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.display-none {
+  @apply hidden;
+}
+
 :root {
   --primary-bg: #242526;
   --secondary-bg: #fff;
