@@ -33,7 +33,7 @@ function DarkLight() {
   return (
     <div>
       <img
-        className="w-5 md:w-7 cursor-pointer invert-0.2 hover:invert-0 dark:invert-0.8 dark:hover:invert-1  pt-1"
+        className="w-5 md:w-7 cursor-pointer invert-0.2 hover:invert-0 dark:bg-[#484a48] dark:rounded-full mt-1"
         src={themeIcon}
         alt=""
         onClick={handleThemeToggle}

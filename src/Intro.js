@@ -2,16 +2,15 @@ import React from "react";
 import introPic from "./figures/Lamia.png";
 import cloud from "./figures/cloud.png";
 import mountain from "./figures/mountain.png";
-import Navbar from "./Navbar";
 
 const Intro = () => {
   return (
     <div className="text-center text-gray-700 font-serif">
-      <div id="home" className="bg-[#eaf6f6]">
+      <div id="home" className="bg-[#eaf6f6] dark:bg-[#191A19]">
         <div className="flex flex-row pl-36 pt-20 my-4">
           <img src={cloud} alt="cloud_image" />
         </div>
-        <h1 className="text-teal-300 text-5xl font-sacramento mt-70 mx-auto">
+        <h1 className="text-teal-300 dark:text-teal-800 text-5xl font-sacramento mt-70 mx-auto">
           I'm Lamia
         </h1>
         <h2 className="font-normal text-teal-300 text-2xl font-montserrat">
@@ -41,8 +40,8 @@ const Intro = () => {
         </p>
       </div>
       <hr />
-      <div id="skills" className="skills bg-[#eaf6f6]">
-        <h2 className="font-normal text-teal-300 text-2xl font-montserrat">
+      <div id="skills" className="skills bg-[#eaf6f6] dark:bg-[#191A19]">
+        <h2 className="font-normal text-teal-300 dark:text-teal-800 text-2xl font-montserrat">
           My Skills.
         </h2>
         <div className="mx-56">
@@ -53,10 +52,10 @@ const Intro = () => {
               alt="Website Design using html css js"
             />
             <div>
-              <h3 className="text-[#11999e] font-montserrat text-right">
+              <h3 className="text-[#11999e] dark:text-[#40d9de] font-montserrat text-right">
                 Website Design & Development
               </h3>
-              <p className="leading-2 text-right">
+              <p className="leading-2 text-right dark:text-slate-300">
                 I have a strong passion for creating visually appealing and
                 user-friendly websites. With my expertise in both design and
                 development, I am able to bring my clients' visions to life by
@@ -66,10 +65,10 @@ const Intro = () => {
           </div>
           <div className="grid grid-flow-row">
             <div>
-              <h3 className="text-[#11999e] font-montserrat text-left">
+              <h3 className="text-[#11999e] dark:text-[#40d9de] font-montserrat text-left">
                 Dance
               </h3>
-              <p className="leading-2 text-left">
+              <p className="leading-2 text-left dark:text-slate-300">
                 Dance is my ultimate form of self-expression, bringing me joy
                 and fulfillment like nothing else.
               </p>
@@ -89,7 +88,7 @@ const Intro = () => {
         <h2 className="font-normal text-teal-300 text-2xl font-montserrat">
           Get In Touch
         </h2>
-        <h4 className="pb-4">
+        <h4 className="pb-4 dark:text-slate-300">
           Want a Responsive Modern Website?
           <br />
           Contact here if you are interested.
@@ -102,16 +101,19 @@ const Intro = () => {
         </a>
       </div>
 
-      <div id="footer" className="bg-[#66bfbf] pt-4 flex flex-col gap-y-4 mt-4">
+      <div
+        id="footer"
+        className="bg-[#66bfbf] dark:bg-[#3f6262] pt-4 flex flex-col gap-y-4 mt-4"
+      >
         <div className="flex flex-row gap-x-4 justify-center">
           <a
-            className="footer-link text-[#164c4e]"
+            className="footer-link text-[#164c4e] dark:text-[#6afaff]"
             href="linkedin.com/in/lamia-hossain-7a86481ab"
           >
             LinkedIn
           </a>
           <a
-            className="footer-link text-[#164c4e]"
+            className="footer-link text-[#164c4e] dark:text-[#6afaff]"
             href="https://github.com/Lamia-Hossain"
           >
             GitHub

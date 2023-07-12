@@ -3,6 +3,7 @@
 import DarkLight from "./DarkLight";
 import Intro from "./Intro";
 import Navbar from "./Navbar";
+import PicUpload from "./PicUpload";
 import introPic from "./figures/Lamia.png";
 import logOut from "./icons/log-out-outline.svg";
 import profile from "./icons/person-circle-outline.svg";
@@ -43,7 +44,7 @@ function Layout() {
 
   return (
     <div>
-      <div className="fixed top-0 right-0 p-2 rounded-b-lg dark:text-white dark:bg-[#191A19] flex flex-row-reverse gap-x-3 bg-slate-300 w-screen">
+      <div className="fixed top-0 right-0 p-2 rounded-b-lg dark:text-white dark:bg-black flex flex-row-reverse gap-x-3 bg-slate-300 w-screen">
         <div ref={menuRef} className="w-fit">
           <div
             onClick={() => {
@@ -70,6 +71,7 @@ function Layout() {
       </div>
 
       <Intro />
+      <PicUpload />
     </div>
   );
 }
